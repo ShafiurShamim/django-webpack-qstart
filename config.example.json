@@ -1,0 +1,7 @@
+{
+  "project_name": "project_qstart",
+  "secret_key": "your-secret-key",
+  "project_settings": "project_qstart.settings",
+  "root_urlconf": "project_qstart.urls",
+  "wsgi_application": "project_qstart.wsgi.application"
+}
