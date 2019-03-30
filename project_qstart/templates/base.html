@@ -6,31 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>{% block title %}Django Webpack Quick Start{% endblock %}</title>
+    <title>{% block title %}Quick Start{% endblock %} | dj</title>
 
     <link rel="stylesheet" href="{% static 'app.css' %}">
-    
+    {% block head_extra %}{% endblock head_extra %}
   </head>
   <body class="{% block body_class %}{% endblock %}">
-    <div class="wrapper">
-    
-    {% include 'includes/header.html' %}
+    <div class="container">
+      {% include 'includes/header.html' %}
+      {% include 'includes/nav.html' %}
 
-    {% include 'includes/nav.html' %}
-
-      <div class="container">
-        {% if messages %}
-          {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">
-              {{ message }}
-            </div>
-          {% endfor %}
-        {% endif %}
+    <div class="container">
+      <div class="content">
+        {% include 'includes/messages.html' %}
         {% block content %}{% endblock %}
       </div>
+    </div>
 
-     {% include 'includes/footer.html' %}
-    <script src="{% static 'app.js' %}"></script>
+      {% include 'includes/footer.html' %}
+      <script src="{% static 'app.js' %}"></script>
     </div>
   </body>
 </html>
