@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+config.json
+db.sqlite3
+node_modules
+npm-debug.log
+.vscode
+media
+static
